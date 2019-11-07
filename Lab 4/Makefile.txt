@@ -1,0 +1,18 @@
+all: hello
+
+clean:
+
+	rm main.o ls1.o ls2.o
+	rm hello
+
+hello: main.o ls1.o ls2.o
+	gcc -o hello main.o ls1.o ls2.o
+	
+main.o: main.c
+	gcc -c main.c
+	
+ls1.o: ls1.o
+	gcc -c ls1.c
+	
+ls2.o: ls2.o
+	gcc -c ls2.c

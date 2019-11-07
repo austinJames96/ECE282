@@ -1,0 +1,11 @@
+all: hello1.c hello5.c
+
+clean:
+	rm -f hello1.c
+	rm -f hello5.c
+	
+hello1: hello1.c
+		gcc hello1.c -lcurses -o hello1
+		
+hello5: hello5.c
+		gcc hello5.c -lcurses -o hello5

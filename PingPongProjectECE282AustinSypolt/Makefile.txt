@@ -1,0 +1,8 @@
+all: pong_sp.c
+
+clean:
+	rm -f pong_sp.c
+	
+test: pong_sp.c
+		gcc -o test pong_sp.c -lcurses
+		
